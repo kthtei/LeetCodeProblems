@@ -1,0 +1,44 @@
+class Solution {
+     /* My Solution 
+     public int numUniqueEmails(String[] emails) {
+        int count = 0;        
+        ArrayList<String> sorted = new ArrayList<>();
+        
+        for (int i = 0; i < emails.length; i++) {
+            String newEmail = "";
+            boolean meetAt = false;
+            boolean meetPlus = false;
+            for (int j = 0; j < emails[i].length(); j++) {
+                if (!meetAt && !meetPlus) {
+                    if (emails[i].charAt(j) == '.') continue;
+                    if (emails[i].charAt(j) == '+') {
+                        meetPlus = true;
+                        continue;
+                    }
+                    newEmail += emails[i].charAt(j);
+                    continue;
+                }
+                if (meetAt) {
+                    newEmail += emails[i].charAt(j);
+                    continue;
+                }
+              
+                if (emails[i].charAt(j) == '@') {
+                    meetAt = true;
+                    meetPlus = false;
+                    newEmail += emails[i].charAt(j);
+                    continue;
+                }
+                if (meetPlus) {
+                    continue;
+                }
+            }
+            if (!sorted.contains(newEmail)) {
+                sorted.add(newEmail);
+                count++;
+            }
+        }
+        return count;
+    }
+    */
+}
